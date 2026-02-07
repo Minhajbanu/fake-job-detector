@@ -1,14 +1,4 @@
-# def predict_job(text, model, vectorizer, clean_func):
-#     cleaned = clean_func(text)
-#     vector = vectorizer.transform([cleaned])
 
-#     prediction = model.predict(vector)[0]
-#     probability = model.predict_proba(vector)[0]
-
-#     confidence = max(probability) * 100
-
-#     label = "🚨 Fake Job Posting" if prediction == 1 else " Legitimate Job Posting"
-#     return label, confidence
 
 import numpy as np
 
