@@ -47,8 +47,17 @@ if st.session_state.user_id is None:
 
     st.stop()
 
-model = joblib.load("model/model.pkl")
-vectorizer = joblib.load("model/vectorizer.pkl")
+# model = joblib.load("model/model.pkl")
+# vectorizer = joblib.load("model/vectorizer.pkl")
+# metrics = joblib.load("model/metrics/metrics.pkl")
+@st.cache_resource
+def load_resources():
+    model = joblib.load("model/model.pkl")
+    vectorizer = joblib.load("model/vectorizer.pkl")
+    metrics = joblib.load("model/metrics/metrics.pkl")
+    return model, vectorizer, metrics
+
+model, vectorizer, metrics = load_resources()
 
 page = st.sidebar.selectbox(
     "Menu",
@@ -118,7 +127,7 @@ elif page == "🧾 History":
 elif page == "📊 Model Performance":
     st.title("📊 Model Performance Dashboard")
 
-    metrics = joblib.load("model/metrics/metrics.pkl")
+    
 
     st.subheader("📈 Classification Metrics")
 
