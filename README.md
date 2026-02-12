@@ -1,3 +1,4 @@
+Live Demo: https://fake-job-detector-urmvf3h9znetk5nqewdpkf.streamlit.app/
 🔍 AI-Based Fake Job Post Detection System
 
 An AI-powered application designed to identify and classify fraudulent job postings using Machine Learning and Natural Language Processing (NLP). This system helps users distinguish between genuine and fake job listings, improving safety and trust in online recruitment platforms.
@@ -64,3 +65,4 @@ Hands-on understanding of NLP pipelines
 Building end-to-end AI + Full Stack applications
 
 Model deployment and user interaction
+
